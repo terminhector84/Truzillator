@@ -1,0 +1,564 @@
+		*{
+			box-sizing:border-box;
+			margin:0;
+			padding:0;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		body{
+			background:#eee;
+		}
+		header{
+			width:100%;
+			height:150px;
+			background:#fff;
+		}
+		#logo{
+			position:absolute;
+			left: 2.5%; 
+			top: 28px;
+		}
+		#marquee{
+			width:1280px;
+			height:90px;
+			color:#333;
+			line-height:102px;
+			margin:0 auto;
+			padding:0 10%;
+			display:flex;
+		}
+		#marqueeFixed{
+			width:50%;
+			height:90px;
+			border:none;
+			text-align:right;
+			font-size:50px;
+			font-weight:600;
+			display:block;	
+		}
+		#slideContainer{
+			width:50%;
+			position:relative;
+			list-style:none;
+		}
+		.marqueeSlide{
+			width:100%;
+			height:90px;
+			color:red;
+			line-height:102px;
+			font-size:3em;
+			text-align:left;
+			font-weight:600;
+			padding-left:8px;
+			display: none;
+		}
+		nav{
+			width:1280px;
+			height:48px;
+			color:#000;
+			line-height:38px;
+			margin:auto;
+		}
+		nav ul{
+			width:80%;
+			height:38px;
+			list-style:none;
+			margin:auto;
+			position: relative;
+			top:10px;
+			display: flex;
+			flex-direction:row;
+		}
+		nav li:not(#propertyPrice){
+			height:38px;
+			padding:0 24px;
+			margin-right:-5px;
+			cursor:pointer;	
+		}
+		nav li:hover{
+			border-top: 2px solid red;
+		}
+		nav li a{
+			color: #000;
+			text-decoration:none;
+			font-weight:600;
+		}
+		@-webkit-keyframes glowing {
+			0% { background-color: #4e91fd; -webkit-box-shadow: 0 0 3px #4e91fd; text-shadow:0 0 3px #fff; opacity: 1.0;}
+			50% { background-color: #00059f; -webkit-box-shadow: 0 0 40px #00059f; text-shadow:0 0 3px #fff; opacity: 0.5; }
+			100% { background-color: #2c2cff; -webkit-box-shadow: 0 0 3px #2c2cff; text-shadow:0 0 3px #fff; opacity: 1.0;}
+		}
+		.button:not(#propertyType){
+			width: 75px;
+			height:25px;
+			font-size:16px;
+			text-align:center;
+			line-height:25px;
+			border-radius:25px;
+			color:white;
+			position:absolute;
+			top:-25px;
+			-webkit-animation: glowing 1500ms 3;
+			-moz-animation: glowing 1500ms 3;
+			-o-animation: glowing 1500ms 3;
+			animation: glowing 1500ms 3;
+		}
+		#propertyType{
+			inherit:no;
+			width: 193px;
+			height:190px;
+			color:#000;
+			font-size:1em;
+			position:absolute;
+			border-radius:5px;
+			border: 1px solid #333;
+			top:38px;
+			display:none;
+			opacity:1;
+			z-index:1;
+			background: #fff;
+			}
+		#propertyType li{
+			border:1px solid #333;
+		}
+		#propertyType li:first-child{
+			border-radius:5px 5px 0 0;
+		}
+		#propertyType li:last-child{
+			border-radius:0 0 5px 5px;
+		}
+		#propertyType .checkBox{
+			width:100%;
+			height:38px;
+			line-height:38px;
+			padding: 0 12px;
+			display:block;
+		}
+		.checkBox label{
+			padding-left: 12px;
+		}
+		#liOne:hover #propertyType{
+			display:block;
+		}
+		#propertyPrice{
+			width:220px;
+			height:230px;
+			background: #fff;
+			border:1px solid #333;
+			border-radius:5px;
+			font-size:1em;
+			position:absolute;
+			top:38px;
+			left:85px;
+			z-index:2;	
+			display:none;
+			border-radius:5px;
+		}
+		#liTwo ul {
+			border: none;
+			padding: 0;
+			margin:0;
+		}
+		#priceInputText{
+			width:220px;
+			height:38px;
+			line-height:38px;
+			border-radius:5px 5px 0 0;
+		}
+		#priceInputText:hover::before{
+			content:"Please select a range from the list below";
+			width:200px;
+			height: 50px;
+			line-height:20px;
+			background:#f44141;
+			color:#f4f141;
+			text-align:center;
+			border-radius:5px;
+			padding:5px;
+			position:absolute;
+			top: -68px;
+			left:4px;
+			z-index: 2;
+		}
+		#priceInputText p{
+			padding:0 10px;
+			display: flex;
+			flex-direction:row;
+		}
+		#priceInputText p input[type=number]{
+			width: 120px;
+			height:25px;
+			margin:10px 2%;
+		}
+		#priceContainer{
+			width:100%;
+			height:190px;
+			border: 1px solid #333;
+			padding:0;
+			display: flex;
+			flex-direction: row;
+			border-radius: 0 0 5px 5px;
+		}
+		#priceLeftie{
+			width:50%;
+			height:190px;
+			position:relative;
+			top:0;
+			display:flex;
+			flex-direction:column;
+		}
+		 .priceLeft{
+			width:100%;
+			height:38px;
+			line-height:37px;
+			border:1px solid #333;
+			text-align:left;
+			padding-left:0;	
+		}
+		.priceLeft:last-child{
+			border-radius: 0 0 0 5px;
+		}
+		#priceRightie{
+			width:50%;
+			height:190px;
+			position:relative;
+			top:0;
+			display:flex;
+			flex-direction:column;
+		}
+		 .priceRight{
+			width:100%;
+			height:38px;
+			line-height:37px;
+			border:1px solid #333;
+			text-align:right;
+			padding-right:0;
+		}
+		.priceRight:last-child{
+			padding:0 10px !important;
+			border-radius: 0 0 5px 0;
+		}
+		#liTwo:hover #propertyPrice{
+			display:block;
+		}
+		.priceShow{
+			color:red;
+			font-weight: 600;
+			visibility:visible;
+		}
+		#numOfRooms{
+			width: 104px;
+			height:153.5px;
+			font-size:1em;
+			position:absolute;
+			background:#fff;
+			border: 1px solid #333;
+			border-radius:5px;
+			top:38px;
+			display:none;
+			z-index:1;
+			}
+		.roomNum{
+			width:100%;
+			height:38px;
+			border:1px solid #333;
+			line-height:38px;
+			text-align:center;
+			padding: 0 10px;
+			display:block;
+		}
+		.roomNum:first-child{
+			border-radius:5px 5px 0 0;
+		}.roomNum:last-child{
+			border-radius: 0 0 5px 5px;
+		}
+		#liThree:hover #numOfRooms{
+			display:block;
+		}
+		#numOfBaths{
+			width: 104px;
+			height:153.5px;
+			font-size:1em;
+			position:absolute;
+			background:#fff;
+			border: 1px solid #333;
+			border-radius:5px;
+			top:38px;
+			display:none;
+			z-index:1;
+			}
+		.bathroomNum{
+			width:100%;
+			height:38px;
+			border: 1px solid #333;
+			line-height:38px;
+			text-align:center;
+			padding: 0 10px;
+			display:block;
+		}
+		.bathroomNum:first-child{
+			border-radius:5px 5px 0 0;
+		}
+		.bathroomNum:last-child{
+			border-radius: 0 0 5px 5px; 
+		}
+		#liFour:hover #numOfBaths{
+			display:block;
+		}
+		#sectionOne{
+			max-width:1280px;
+			height: 170px;
+			display:block;
+			opacity:0;
+			visibility:hidden;
+			margin: 0 auto;
+			z-index:0;
+			transition: all 250ms ease-in;
+		}
+		#propLength{
+			width: 100%;
+			height: 100px;
+			line-height: 120px;
+			display:block;
+			background:#fff;
+			margin:10px auto;
+			border-radius:5px;
+			color: #333;
+			font-size: 1.5em;
+			text-align:center;
+		}	
+		.spanie{
+			width:32px;
+			height:28px;
+			display:inline-block;
+			margin:0 3px;
+			text-align:center;
+			line-height:26px;
+			background: #333;
+			color:#fff;
+			border-radius:2px;
+			padding:1px;
+			box-shadow:1px 2px 2px 2px gray;
+		}
+		#filterT{
+			width:100%;
+			height: 50px;
+			margin:0 auto;
+			display:block;
+			position:relative;	
+			clear:both;
+			z-index: 0;
+		}
+		#filterT ul{
+			width: 80%;
+			height:38px;
+			margin:0 auto;
+			list-style: none;
+			position:relative;
+			display:flex;
+			flex-direction:row;			
+		}
+		#filterT .filterText{
+			width:155px;
+			height: 38px;
+			line-height: 38px;
+			display:block;
+			opacity:1;
+			padding-left: 12px;
+			text-align:center;
+			background:rgb(256,256,256);
+			position:relative; 
+			font-weight: 600;
+			transition:all 200ms ease-out;
+		}
+		#filterT .filterText:not(#clearFilter){
+			border-bottom:2px ridge red;
+			box-shadow: 0px 2px 2px -2px #777;
+		}
+		.showFilters{
+			visibility: visible;
+			opacity: 0;
+			background:black;
+			transition: all 250ms ease-in;
+		}
+		#clearFilter{
+			border-radius:5px;
+			color:#000 !important;
+			margin-left: 50px;
+			border-bottom:2px ridge red;
+			cursor:pointer;
+		}
+		#clearFilter:hover{
+			background:orange;
+			border: none;
+			color:red !important;
+			box-shadow:-4px 3px 2px #666;
+		}
+		#sectionDos{
+			display:flex;
+			flex-direction:row;
+			clear:both;
+		}
+		#main{
+			max-width:1280px;
+			width:100%;
+			min-height:540px;
+			height:auto;
+			display:flex;
+			flex-direction: row;
+			flex-wrap:wrap;
+			margin:0px auto;
+			padding:2.15% 2.3%;
+			background:#fff;
+		}
+		.divie{
+			width: 340px;
+			height: 235px;
+			display: block;
+			vertical-align:top;
+			margin:10px 2.3%;
+			position:relative;
+		}
+		.divie img{
+			display:block;
+			margin:0 auto;
+		}
+		.overlay{
+			width:315px;
+			height:80px;
+			position:relative;
+			top:-85px;
+			left:15px;
+			background:rgba(63,63,63,0.3);
+			z-index:1;
+			padding:8px;
+		}
+		.overlay p{
+			color:#fff;
+			text-shadow:2px 2px 2px #333;
+			text-transform:uppercase;
+			font-weight:600;
+			line-height:18px;				
+		}
+		#canvas{
+			position:absolute;
+			left:75%;
+			top:0px;
+			border:1px solid #4ba3d8;
+			box-shadow: 3px 3px 2px #888;
+		}
+		#closeMe{
+			width:18px;
+			height:18px;
+			display:block;
+			color:#4ba3d8;
+			border:#4ba3d8;
+			font-weight: bold;
+			text-align:center;
+			line-height:18px;
+			position:absolute;
+			top:3px;
+			left:calc(75% + 301px);
+			background:#888;
+			border:1px solid #4ba3d8;
+			cursor:pointer;
+		}
+		footer{
+			width:100%;
+			height:90px;
+			background:#333;
+			position:relative;
+			bottom:-45px;
+		}
+		footer p{
+			width:100%;
+			line-height:35px;
+			color:#fff;
+			text-align:center;
+		}
+		footer p a{
+			color: #fff;
+		}
+		@media only screen and (max-width:1280px){
+			#logo{
+				left: 42px; 
+				top: 22px;
+			}
+			#canvas{
+				display:none;
+			}
+			#main{
+				max-width: 1024px;
+				width:100%;
+				padding:2.15% 5.5%;
+			}
+			.divie{
+				margin:10px 5.5%;
+			}
+		}
+		@media only screen and (max-width:1024px){
+			#main{
+				width:100%;
+				max-width: 991px;
+				padding:2.15% 5.22%;
+			}
+			.divie{
+				margin:10px 5.22%;
+			}
+		}
+		@media only screen and (max-width:991px){
+			header{
+				width:100%;
+				height:170px;
+			}
+			#logo{
+				left: 10px; 
+				top: 10px;
+			}
+			#marquee{
+				width:100%;
+				height:72px;
+				line-height:82px;
+				position:relative;
+				top:50px;
+			}
+			#marqueeFixed{
+				width:60%;
+				height:72px;
+				font-size:40px;	
+			}
+			#slideContainer{
+				width:40%;
+			}
+			.marqueeSlide{
+				width:100%;
+				height:72px;
+				line-height:82px;
+				font-size:40px;
+				padding-left:5px;
+			}
+			nav{
+				position:relative;
+				top: 62.5px;
+			}
+			nav ul{
+				position: relative;
+				top:0px;
+			}
+			#filterT ul{
+				width: 98%;
+			}
+			#filterT .filterText{
+				padding-left: 2.5px;
+			}
+			#clearFilter{
+				margin-left: 25px;
+			}
+			#main{
+				width:100%;
+				max-width: 767px;
+				padding:2.15% 1.61%;
+			}
+			.divie{
+				margin:10px 1.61%;
+			}
+		}

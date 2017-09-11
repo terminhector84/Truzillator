@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+	<link rel="stylesheet" href="raltor.css">	
+</head>
+	<body>
+		<header>
+		<canvas id="logo" width="200" height="40"></canvas>
+		<div id="marquee">
+			<p id="marqueeFixed">Find Your Ideal</p>
+			<ul id="slideContainer">
+				<li class="marqueeSlide">House</li>
+				<li class="marqueeSlide">Condo</li>
+				<li class="marqueeSlide">Town House</li>
+				<li class="marqueeSlide">Co-op</li>
+			</ul>
+		</div>
+		<nav>
+			<ul>
+				<li id="liOne"><a href="#" >Property Type</a>
+					<ul id="propertyType">
+						<li class="checkBox"><p><input type="checkbox" value="All" class="selectProp" multiple><label>All Properties</label></p></li>
+						<li class="checkBox"><p><input type="checkbox" value="House" class="selectProp" multiple><label>Houses</label></p></li>
+						<li class="checkBox"><p><input type="checkbox" value="Condo" class="selectProp" multiple><label>Condo</label></p></li>
+						<li class="checkBox"><p><input type="checkbox" value="Town House" class="selectProp" multiple><label>Town Houses</label></p></li>
+						<li class="checkBox"><p><input type="checkbox" value="Co_op" class="selectProp" multiple><label></label>Co-op</p></li>
+					</ul>
+				</li>
+				<li id="liTwo"><a href="#">Price</a>
+					<div id="propertyPrice">
+						<div id="priceInputText">
+						<p>
+						<input type="number"  min="50" max="299000" size="10" maxlength="11" id="inputOne">
+					  - <input type="number"  min="301" max="1000000"  size="10" maxlength="11" id="inputTwo">
+						</p>
+						</div>
+						<div id="priceContainer">
+							<ul id="priceLeftie">
+								<li class="priceLeft">$50k</li>
+								<li class="priceLeft">$100k</li>
+								<li class="priceLeft">$150k</li>
+								<li class="priceLeft">$200k</li>
+								<li class="priceLeft">$250k</li>
+							</ul>
+							<ul id="priceRightie">
+								<li class="priceRight">$300k</li>
+								<li class="priceRight">$350k</li>
+								<li class="priceRight">$400k</li>
+								<li class="priceRight">$450k</li>
+								<li class="priceRight">Any Price</li>
+							</ul>
+						</div>
+					</div>				
+				</li>
+				<li id="liThree"><a href="#">Rooms</a>
+					<ul id="numOfRooms">
+						<li class="roomNum">1</li>
+						<li class="roomNum">2</li>
+						<li class="roomNum">3</li>
+						<li class="roomNum">4</li>
+					</ul>
+				</li>
+				<li id="liFour"><a href="#">Bathrooms</a>
+					<ul id="numOfBaths">
+						<li class="bathroomNum">1</li>
+						<li class="bathroomNum">2</li>
+						<li class="bathroomNum">3</li>
+						<li class="bathroomNum">3.5</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		</header>
+		<section id="sectionOne">
+		<div id="propLength">We Found<span id="results" class="spanie"> 0 </span>Properties</div>
+		<div id="filterT">
+			<ul>
+				<li class="filterText"></li>
+				<li class="filterText"></li>
+				<li class="filterText"></li>
+				<li class="filterText"></li>
+				<li class="filterText"></li>
+				<li class="filterText" id="clearFilter">Clear Filters</li>
+			</ul>
+		</div>
+		</section>
+		<section id="sectionDos">
+			<div id="main"></div>
+			<canvas id="canvas" width="320" height="150"></canvas>
+			<div id="closeMe">X</div>
+		</section>
+		
+	<footer>
+		<p>Hector</p>
+		<p><a href="https://terminhector84.github.io/roomService/">Check out my other projects</a></p>
+	</footer>
+	<script src="stars.js"></script>
+	<script async src="logo.js"></script>
+	<script src="caroussel.js"></script>
+	<script src="realtor.js"></script>
+	</body>	
+</html>
